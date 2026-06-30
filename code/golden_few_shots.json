@@ -1,0 +1,245 @@
+{
+  "Apache": [
+    {
+      "template": "env.createBean2(): Factory error creating <*> (<*>, <*>)",
+      "log": "env.createBean2(): Factory error creating vm: ( vm, )",
+      "description": "A factory error occurred while creating the bean named 'vm' during the call to env.createBean2(), with empty context parameters."
+    },
+    {
+      "template": "jk2_init() Can't find child <*> in scoreboard",
+      "log": "jk2_init() Can't find child 4058 in scoreboard",
+      "description": "Apache failed to find child process ID 4058 in the scoreboard during jk2 connector initialization."
+    },
+    {
+      "template": "[client <*>] Invalid URI in request <*> <*>",
+      "log": "[client 210.245.233.251] Invalid URI in request GET HTTP/1.1",
+      "description": "Client 210.245.233.251 sent a request with an invalid URI: GET HTTP/1.1."
+    }
+  ],
+  "BGL": [
+    {
+      "template": "instruction address: <*>",
+      "log": "instruction address: 0x0000df30",
+      "description": "The system recorded the current instruction execution address as 0x0000df30."
+    },
+    {
+      "template": "mask..................<*>",
+      "log": "mask..................0x10",
+      "description": "The system mask value was set to 0x10."
+    },
+    {
+      "template": "close EDRAM pages as soon as possible....<*>",
+      "log": "close EDRAM pages as soon as possible....0",
+      "description": "The system attempted to close EDRAM pages as soon as possible, with 0 pages involved."
+    }
+  ],
+  "Hadoop": [
+    {
+      "template": "Notify JHEH isAMLastRetry: <*>",
+      "log": "Notify JHEH isAMLastRetry: false",
+      "description": "MRAppMaster notified the Job History Server that the current ApplicationMaster retry status (isAMLastRetry) is false."
+    },
+    {
+      "template": "Adding protocol <*> to the server",
+      "log": "Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server",
+      "description": "The server successfully added and registered the protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB."
+    },
+    {
+      "template": "TaskAttempt killed because it ran on unusable node <*>. AttemptId:<*>",
+      "log": "TaskAttempt killed because it ran on unusable node 04DN8IQ.fareast.corp.microsoft.com:55452. AttemptId:attempt_1445087491445_0004_m_000002_0",
+      "description": "Task attempt attempt_1445087491445_0004_m_000002_0 was killed by the system because it ran on the unusable node 04DN8IQ.fareast.corp.microsoft.com:55452."
+    }
+  ],
+  "HDFS": [
+    {
+      "template": "Receiving block <*> src: <*> dest: <*>",
+      "log": "Receiving block blk_-1608999687919862906 src: /10.250.10.6:40524 dest: /10.250.10.6:50010",
+      "description": "DataNode is receiving block ID blk_-1608999687919862906 from source /10.250.10.6:40524 to destination /10.250.10.6:50010."
+    },
+    {
+      "template": "<*> Starting thread to transfer block <*> to <*>, <*>",
+      "log": "10.250.14.224:50010 Starting thread to transfer block blk_-1608999687919862906 to 10.251.215.16:50010, 10.251.71.193:50010",
+      "description": "DataNode 10.250.14.224:50010 started a thread to transfer block blk_-1608999687919862906 to 10.251.215.16:50010 and 10.251.71.193:50010."
+    },
+    {
+      "template": "writeBlock <*> received exception java.net.SocketTimeoutException: <*> millis timeout while waiting for channel to be ready for <*> ch : java.nio.channels.SocketChannel[connected local=<*> remote=<*>]",
+      "log": "writeBlock blk_7008279672769077211 received exception java.net.SocketTimeoutException: 490000 millis timeout while waiting for channel to be ready for write. ch : java.nio.channels.SocketChannel[connected local=/10.251.42.191:43873 remote=/10.251.123.33:50010]",
+      "description": "A SocketTimeoutException occurred while writing block blk_7008279672769077211, with a 490000 millis timeout waiting for the write channel, connected from /10.251.42.191:43873 to /10.251.123.33:50010."
+    }
+  ],
+  "HealthApp": [
+    {
+      "template": "writeDataToDB size <*>",
+      "log": "writeDataToDB size 327",
+      "description": "The application wrote data to the database with a payload size of 327 bytes."
+    },
+    {
+      "template": "getDeviceShutDownBoolean shutDown=<*>",
+      "log": "getDeviceShutDownBoolean shutDown=false",
+      "description": "The system queried the device shutdown status, returning shutDown=false."
+    },
+    {
+      "template": "getMidWareStepCountService: pkgName = <*>, service = <*>",
+      "log": "getMidWareStepCountService: pkgName = com.huawei.systemserver, service = com.huawei.systemserver.ihealth.connectivity.HwStepCounterService",
+      "description": "Client package com.huawei.systemserver requested the middleware step count service named com.huawei.systemserver.ihealth.connectivity.HwStepCounterService."
+    }
+  ],
+  "HPC": [
+    {
+      "template": "risBoot (command <*>) Error: failed to RIS boot: <ABORT code completed>",
+      "log": "risBoot (command 1900) Error: failed to RIS boot: <ABORT code completed>",
+      "description": "The risBoot operation for command ID 1900 failed, returning an ABORT code and terminating the boot process."
+    },
+    {
+      "template": "bootGenvmunix (command <*>) Error: Timeout waiting for system to come up: <ABORT code completed>",
+      "log": "bootGenvmunix (command 1905) Error: Timeout waiting for system to come up: <ABORT code completed>",
+      "description": "The bootGenvmunix operation for command ID 1905 failed due to a timeout waiting for the system to come up, returning an ABORT code."
+    },
+    {
+      "template": "boot (command <*>) Error: timeout while booting.",
+      "log": "boot (command 2146) Error: timeout while booting.",
+      "description": "The boot operation for command ID 2146 failed due to a timeout during the boot process."
+    }
+  ],
+  "Linux": [
+    {
+      "template": "audit(<*>): syscall=<*> exit=<*> a0=<*> a1=<*> a2=<*> a3=<*> items=<*> pid=<*> loginuid=<*> uid=<*> gid=<*> euid=<*> suid=<*> fsuid=<*> egid=<*> sgid=<*> fsgid=<*>",
+      "log": "audit(1138278092.486:112647): syscall=15 exit=0 a0=805ccbd a1=1c0 a2=9a397c8 a3=1c0 items=1 pid=509 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0",
+      "description": "The audit system recorded a system call event: process 509 (uid=0) executed syscall=15 (chmod) with arguments a0=805ccbd, a1=1c0, exiting successfully (exit=0)."
+    },
+    {
+      "template": "serio: i8042 KBD port at <*>,<*> irq <*>",
+      "log": "serio: i8042 KBD port at 0x60,0x64 irq 1",
+      "description": "The system identified an i8042 keyboard controller port at addresses 0x60 and 0x64, using IRQ 1."
+    },
+    {
+      "template": "open(<*>): No such file or directory",
+      "log": "open(/dev/pts/0): No such file or directory",
+      "description": "Failed to open file /dev/pts/0 with error 'No such file or directory'."
+    }
+  ],
+  "Mac": [
+    {
+      "template": "Metadata.framework [Error]: void _MDItemMarkAsUsedForPath(<*>): was called with a <*> path",
+      "log": "Metadata.framework [Error]: void _MDItemMarkAsUsedForPath(CFStringRef): was called with a NULL path",
+      "description": "Metadata.framework reported an error: function _MDItemMarkAsUsedForPath(CFStringRef) was called with a NULL path."
+    },
+    {
+      "template": "[<*>] itemasync_CopyProperty signalled err=<*> (<*>) at <*> line <*>",
+      "log": "[17:13:42.741] itemasync_CopyProperty signalled err=-12785 (kFigBaseObjectError_Invalidated) (invalidated) at /Library/Caches/com.apple.xbs/Sources/CoreMedia/CoreMedia-1731.15.207/Prototypes/Player/FigPlayer_Async.c line 2092",
+      "description": "At 17:13:42.741, itemasync_CopyProperty signaled error -12785 (kFigBaseObjectError_Invalidated) at FigPlayer_Async.c line 2092."
+    },
+    {
+      "template": "*** WebKit discarding exception: <*> *** -[__NSArrayM objectAtIndex:]: index <*> beyond bounds for empty array",
+      "log": "*** WebKit discarding exception: <NSRangeException> *** -[__NSArrayM objectAtIndex:]: index 0 beyond bounds for empty array",
+      "description": "WebKit discarded an NSRangeException caused by accessing index 0 in an empty array (index 0 beyond bounds)."
+    }
+  ],
+  "OpenSSH": [
+    {
+      "template": "Received disconnect from <*>: <*>: Closed due to user request. [preauth]",
+      "log": "Received disconnect from 103.207.39.212: 11: Closed due to user request. [preauth]",
+      "description": "Received disconnect request from 103.207.39.212 with code 11 (Closed due to user request) during the pre-authentication stage [preauth]."
+    },
+    {
+      "template": "error: Received disconnect from <*>: <*>: <*>: Auth fail [preauth]",
+      "log": "error: Received disconnect from 103.79.141.133: 3: com.jcraft.jsch.JSchException: Auth fail [preauth]",
+      "description": "Received error disconnect request from 103.79.141.133 with code 3 (com.jcraft.jsch.JSchException: Auth fail) during the pre-authentication stage [preauth]."
+    },
+    {
+      "template": "pam_unix(sshd:session): session closed for user <*>",
+      "log": "pam_unix(sshd:session): session closed for user jmzhu",
+      "description": "The pam_unix module reported that the SSH session for user jmzhu has been closed."
+    }
+  ],
+  "OpenStack": [
+    {
+      "template": "<*> \"GET <*> <*>\" status: <*> len: <*> time: <*>",
+      "log": "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/detail HTTP/1.1\" status: 200 len: 1583 time: 0.1919448",
+      "description": "IP 10.11.10.1 issued an HTTP GET request to /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/detail, which succeeded (status 200) with a response length of 1583 bytes, taking 0.1919448 seconds."
+    },
+    {
+      "template": "[instance: <*>] vcpu limit not specified, defaulting to unlimited",
+      "log": "[instance: 748f18b4-88e3-4b60-822a-f2b25fac50b2] vcpu limit not specified, defaulting to unlimited",
+      "description": "Instance 748f18b4-88e3-4b60-822a-f2b25fac50b2 did not specify a vCPU limit, defaulting to unlimited."
+    },
+    {
+      "template": "[instance: <*>] Total disk: <*> GB, used: <*> GB",
+      "log": "[instance: 748f18b4-88e3-4b60-822a-f2b25fac50b2] Total disk: 15 GB, used: 0.00 GB",
+      "description": "The disk resource status for instance 748f18b4-88e3-4b60-822a-f2b25fac50b2 is: Total 15 GB, Used 0.00 GB."
+    }
+  ],
+  "Proxifier": [
+    {
+      "template": "<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>",
+      "log": "proxy.cse.cuhk.edu.hk:5070 close, 420 bytes sent, 1042 bytes (1.01 KB) received, lifetime 00:01",
+      "description": "Connection to proxy proxy.cse.cuhk.edu.hk:5070 closed, with 420 bytes sent and 1042 bytes (1.01 KB) received, lasting 00:01."
+    },
+    {
+      "template": "<*> error : Could not connect to proxy <*> - connection attempt failed with error <*>",
+      "log": "mtalk.google.com:5228 error : Could not connect to proxy proxy.cse.cuhk.edu.hk:5070 - connection attempt failed with error 10061",
+      "description": "Failed to connect to mtalk.google.com:5228 via proxy proxy.cse.cuhk.edu.hk:5070 with error code 10061."
+    },
+    {
+      "template": "<*> error : Could not connect to proxy <*> - Could not resolve <*> error <*>",
+      "log": "223.167.104.147:80 error : Could not connect to proxy proxy.cse.cuhk.edu.hk:5070 - Could not resolve proxy.cse.cuhk.edu.hk error 11001",
+      "description": "Failed to connect to 223.167.104.147:80 via proxy proxy.cse.cuhk.edu.hk:5070 due to domain resolution failure, error code 11001."
+    },
+    {
+      "template": "<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>",
+      "log": "proxy.cse.cuhk.edu.hk:5070 close, 440 bytes sent, 7416 bytes (7.24 KB) received, lifetime <1 sec",
+      "description": "Connection to proxy proxy.cse.cuhk.edu.hk:5070 closed, with 440 bytes sent and 7416 bytes (7.24 KB) received, lasting less than 1 second."
+    }
+  ],
+  "Spark": [
+    {
+      "template": "Another thread is loading <*>, waiting for it to finish...",
+      "log": "Another thread is loading rdd_27_39, waiting for it to finish...",
+      "description": "The current thread is waiting for another thread to finish loading rdd_27_39."
+    },
+    {
+      "template": "Found block <*> locally",
+      "log": "Found block rdd_2_9 locally",
+      "description": "The system successfully found block rdd_2_9 locally."
+    },
+    {
+      "template": "stopped o.s.j.s.ServletContextHandler{<*>}",
+      "log": "stopped o.s.j.s.ServletContextHandler{/metrics/json,null}",
+      "description": "ServletContextHandler has stopped serving the path {/metrics/json,null}."
+    }
+  ],
+  "Thunderbird": [
+    {
+      "template": "[<*>]: Active state mismatch GUID=<*>, port=<*>, state <*>, GUID=<*>, port=<*>, state <*>",
+      "log": "[ib_sm_bringup.c:450]: Active state mismatch GUID=4259020000ad0500, port=17, state 1, GUID=b0de040000ad0500, port=1, state 4",
+      "description": "Active state mismatch detected: Port 17 on device 4259020000ad0500 is state 1, while Port 1 on peer device b0de040000ad0500 is state 4."
+    },
+    {
+      "template": "WARNING: Could not write <*>: No space left on device",
+      "log": "WARNING: Could not write /var/log/lastlog: No space left on device",
+      "description": "System warning: Failed to write to /var/log/lastlog due to lack of space on device (No space left on device)."
+    },
+    {
+      "template": "IOAPIC (id[<*>] address[<*>] gsi_base[<*>])",
+      "log": "IOAPIC (id[0x08] address[0xfec00000] gsi_base[0])",
+      "description": "IOAPIC identified with ID 0x08, physical address 0xfec00000, and GSI base 0."
+    }
+  ],
+  "Zookeeper": [
+    {
+      "template": "minSessionTimeout set to <*>",
+      "log": "minSessionTimeout set to -1",
+      "description": "Configuration minSessionTimeout has been set to -1."
+    },
+    {
+      "template": "Server environment:os.name=<*>",
+      "log": "Server environment:os.name=Linux",
+      "description": "Server environment info: OS name is Linux."
+    },
+    {
+      "template": "Server environment:java.home=<*>",
+      "log": "Server environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre",
+      "description": "Server environment info: Java home directory is /usr/lib/jvm/java-7-openjdk-amd64/jre."
+    }
+  ]
+}

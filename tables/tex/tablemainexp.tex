@@ -1,0 +1,163 @@
+\begin{table*}[t]
+    \centering
+    \small
+    \caption{Fine-grained Classification Results and Closed-loop Performance Metrics on LogHub-2.0. The upper row shows expert-annotated ground truth counts; the lower row shows LogTR's actions. 
+    Legend: $R \in \mathcal{A}_{fixR}$, $S \in \mathcal{A}_{fixS}$, $D \in \mathcal{A}_{mitD}$, $G \in \mathcal{A}_{mitG}$, $F \in \mathcal{A}_{fail}$.}
+    \renewcommand{\arraystretch}{0.55}
+    \label{tab:main_results_full}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l c l | c c c | c c c | c | c c c}
+        \toprule
+        \multirow{2}{*}{\textbf{Dataset}} 
+        & \multirow{2}{*}{\textbf{Alerts}} 
+        & \multirow{2}{*}{\textbf{Type}} 
+        & \multicolumn{3}{c|}{\textbf{Data Defects ($\mathcal{D}$)}} 
+        & \multicolumn{3}{c|}{\textbf{Model Noise ($\mathcal{M}$)}} 
+        & \textbf{Ambig.} 
+        & \multicolumn{3}{c}{\textbf{Metrics (\%)}} \\
+        & & 
+        & \textbf{$D_{syn}$} 
+        & \textbf{$D_{mrg}$} 
+        & \textbf{$D_{raw}$} 
+        & \textbf{$M_{enc}$} 
+        & \textbf{$M_{dec}$} 
+        & \textbf{$M_{cap}$} 
+        & \textbf{$I_{over}$} 
+        & \textbf{$R_{rep}$} 
+        & \textbf{$R_{rob}$} 
+        & \textbf{$R_{aut}$} \\
+        \midrule
+        
+        \multirow{2}{*}{Apache} & \multirow{2}{*}{4} & Label 
+        & 3 & - & - & - & 1 & - & - 
+        & \multirow{2}{*}{100} & \multirow{2}{*}{100} & \multirow{2}{*}{100} \\
+        & & Result 
+        & \res{3}{R} & - & - & - & \res{1}{G} & - & - 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{BGL} & \multirow{2}{*}{28} & Label 
+        & 12 & 3 & 2 & 4 & 2 & 2 & 3 
+        & \multirow{2}{*}{100} & \multirow{2}{*}{75.0} & \multirow{2}{*}{89.3} \\
+        & & Result 
+        & \res{12}{R} & \res{3}{S} & \mix{1}{F}{1}{R} & \res{4}{D} & \res{2}{G} & \res{2}{F} & \res{3}{R} 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{HDFS} & \multirow{2}{*}{8} & Label 
+        & 2 & - & - & 2 & 3 & - & 1 
+        & \multirow{2}{*}{100} & \multirow{2}{*}{100} & \multirow{2}{*}{100} \\
+        & & Result 
+        & \res{2}{R} & - & - & \res{2}{D} & \res{3}{G} & - & \res{1}{R} 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{HPC} & \multirow{2}{*}{7} & Label 
+        & 6 & - & - & - & - & - & 1 
+        & \multirow{2}{*}{100} & \multirow{2}{*}{-} & \multirow{2}{*}{100} \\
+        & & Result 
+        & \res{6}{R} & - & - & - & - & - & \res{1}{R} 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{Hadoop} & \multirow{2}{*}{27} & Label 
+        & 19 & - & 2 & 4 & 2 & - & - 
+        & \multirow{2}{*}{94.7} & \multirow{2}{*}{100} & \multirow{2}{*}{92.6} \\
+        & & Result 
+        & \mix{18}{R}{1}{F} & - & \mix{1}{F}{1}{R} & \res{4}{D} & \res{2}{G} & - & - 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{HealthApp} & \multirow{2}{*}{15} & Label 
+        & 13 & 1 & - & 1 & - & - & - 
+        & \multirow{2}{*}{100} & \multirow{2}{*}{100} & \multirow{2}{*}{100} \\
+        & & Result 
+        & \res{13}{R} & \res{1}{S} & - & \res{1}{D} & - & - & - 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{Linux} & \multirow{2}{*}{94} & Label 
+        & 78 & - & - & 11 & 2 & - & 3 
+        & \multirow{2}{*}{100} & \multirow{2}{*}{84.6} & \multirow{2}{*}{97.9} \\
+        & & Result 
+        & \res{78}{R} & - & - & \mix{9}{D}{2}{F} & \res{2}{G} & - & \res{3}{R} 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{Mac} & \multirow{2}{*}{163} & Label 
+        & 68 & 3 & 3 & 25 & 30 & 4 & 30 
+        & \multirow{2}{*}{91.5} & \multirow{2}{*}{93.2} & \multirow{2}{*}{92.0} \\
+        & & Result 
+        & \mix{63}{R}{5}{F} & \mix{2}{S}{1}{F} & \res{3}{F} & \res{25}{D} & \res{30}{G} & \res{4}{F} & \res{30}{R} 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{OpenSSH} & \multirow{2}{*}{1} & Label 
+        & 1 & - & - & - & - & - & - 
+        & \multirow{2}{*}{100} & \multirow{2}{*}{-} & \multirow{2}{*}{100} \\
+        & & Result 
+        & \res{1}{R} & - & - & - & - & - & - 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{OpenStack} & \multirow{2}{*}{3} & Label 
+        & 2 & - & - & - & - & - & 1 
+        & \multirow{2}{*}{100} & \multirow{2}{*}{-} & \multirow{2}{*}{100} \\
+        & & Result 
+        & \res{2}{R} & - & - & - & - & - & \res{1}{R} 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{Proxifier} & \multirow{2}{*}{0} & Label 
+        & - & - & - & - & - & - & - 
+        & \multirow{2}{*}{-} & \multirow{2}{*}{-} & \multirow{2}{*}{-} \\
+        & & Result 
+        & - & - & - & - & - & - & - 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{Spark} & \multirow{2}{*}{22} & Label 
+        & 10 & 1 & 1 & 4 & 2 & - & 4 
+        & \multirow{2}{*}{90.9} & \multirow{2}{*}{100} & \multirow{2}{*}{95.5} \\
+        & & Result 
+        & \mix{9}{R}{1}{F} & \res{1}{S} & \res{1}{R} & \res{4}{D} & \res{2}{G} & - & \res{4}{R} 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{Thunderbird} & \multirow{2}{*}{266} & Label 
+        & 166 & 10 & - & 43 & 22 & - & 25 
+        & \multirow{2}{*}{91.3} & \multirow{2}{*}{100} & \multirow{2}{*}{94.4} \\
+        & & Result 
+        & \mix{153}{R}{13}{F} & \mix{8}{S}{2}{F} & - & \res{43}{D} & \res{22}{G} & - & \res{25}{R} 
+        & & & \\
+        \cmidrule{3-13}
+
+        \multirow{2}{*}{Zookeeper} & \multirow{2}{*}{9} & Label 
+        & 6 & - & 1 & 2 & - & - & - 
+        & \multirow{2}{*}{100} & \multirow{2}{*}{100} & \multirow{2}{*}{100} \\
+        & & Result 
+        & \res{6}{R} & - & \res{1}{R} & \res{2}{D} & - & - & - 
+        & & & \\
+        
+        \midrule
+        
+        \multirow{2}{*}{\textbf{Total}} & \multirow{2}{*}{\textbf{647}} & \textbf{Label} 
+        & \textbf{386} & \textbf{18} & \textbf{9} 
+        & \textbf{96} & \textbf{64} & \textbf{6} 
+        & \textbf{68} 
+        & \multirow{2}{*}{\textbf{94.3}} 
+        & \multirow{2}{*}{\textbf{95.2}} 
+        & \multirow{2}{*}{\textbf{94.4}} \\
+        & & \textbf{Result} 
+        & \mix{\textbf{366}}{\textbf{R}}{\textbf{20}}{\textbf{F}} 
+        & \mix{\textbf{15}}{\textbf{S}}{\textbf{3}}{\textbf{F}} 
+        & \mix{\textbf{5}}{\textbf{F}}{\textbf{4}}{\textbf{R}} 
+        & \mix{\textbf{94}}{\textbf{D}}{\textbf{2}}{\textbf{F}} 
+        & \res{\textbf{64}}{\textbf{G}} 
+        & \res{\textbf{6}}{\textbf{F}} 
+        & \res{\textbf{68}}{\textbf{R}} 
+        & & & \\
+        \bottomrule
+    \end{tabular}%
+    }
+\end{table*}

@@ -1,12 +1,6 @@
 # Detailed Tables for the Paper
 
-| Markdown Section | Repository Source | Paper Source |
-| --- | --- | --- |
-| Table II Detailed Version | `tex/tablemainexp.tex` | Table II in `icse2027-paper1007.pdf` |
-| Table V Detailed Version | `tex/tab44.tex` | Table V in `icse2027-paper1007.pdf` |
-| Table VII Detailed Version | `tex/tab452.tex` | Table VII in `icse2027-paper1007.pdf` |
-
-## Table II Detailed Version
+## Table 2 Detailed Version
 
 | Dataset | Alerts | Type | D_syn | D_mrg | D_raw | M_enc | M_dec | M_cap | I_over | R_rep | R_rob | R_aut |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -41,7 +35,7 @@
 | Total | 647 | Label | 386 | 18 | 9 | 96 | 64 | 6 | 68 | 94.3 | 95.2 | 94.4 |
 |  |  | Result | 366 (R) + 20 (F) | 15 (S) + 3 (F) | 5 (F) + 4 (R) | 94 (D) + 2 (F) | 64 (G) | 6 (F) | 68 (R) |  |  |  |
 
-## Table V Detailed Version
+## Table 6 Detailed Version
 
 | Dataset | Metric | AEL | Drain | IPLoM | LenMa | LFA | LogCluster | LogMine | Logram | LogSig | MoLFI | SHISO | SLCT | Spell | DivLog | LILAC | LogBatcher |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -74,7 +68,7 @@
 | Proxifier | PA | 0.677 / 0.677 | 0.688 / 0.688 | 0.000 / 0.000 | 0.495 / 0.495 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.495 / 0.495 | 0.130 / 0.130 | 0.480 / 0.480 | 1.000 / 1.000 | 1.000 / 1.000 | 1.000 / 1.000 |
 |  | FTA | 0.417 / 0.417 | 0.176 / 0.176 | 0.000 / 0.000 | 0.151 / 0.151 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.000 / 0.000 | 0.242 / 0.242 | 0.022 / 0.022 | 0.011 / 0.011 | 1.000 / 1.000 | 1.000 / 1.000 | 1.000 / 1.000 |
 
-## Table VII Detailed Version
+## Table 8 Detailed Version
 
 | Dataset | Apache | BGL | HDFS | HPC | Hadoop | HealthApp | Linux | Mac | OpenSSH | OpenStack | Proxifier | Spark | Thunderbird | Zookeeper |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
